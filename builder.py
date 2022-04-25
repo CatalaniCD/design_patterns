@@ -5,12 +5,15 @@ Created on Sun Apr 24 13:47:47 2022
 
 @author: q
 
-classes
+___Builder
+Def. The intent of the Builder design pattern is to separate 
+the construction of a complex object from its representation.
 
+classes
     Director
-        Construct
+        .construct
     Builder
-        Build
+        .build
     Product
         Parts
         
@@ -100,7 +103,6 @@ class Director():
         # car body
         self.__builder.addPart(part = Body())
        
-        
         # car engine
         self.__builder.addPart(part = Engine())
         
@@ -116,7 +118,7 @@ if __name__ == '__main__':
     
     dt = Director(builder = JeepBuilder)
     
-    dt.getProduct()
-
-    dt.getProduct() 
+    print(dt.getProduct())
+    print()
+    print(dt.getProduct()) 
     
